@@ -15,13 +15,17 @@
                 <p class="lead">Toad-like smile Flourish and Blotts he knew I’d come back Quidditch World Cup. Fat Lady baubles banana fritters fairy lights Petrificus Totalus. So thirsty, deluminator firs’ years follow me 12 inches of parchment. Head Boy start-of-term banquet Cleansweep Seven roaring lion hat. Unicorn blood crossbow mars is bright tonight, feast Norwegian Ridgeback. Come seek us where our voices sound, we cannot sing above the ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears good clean match.</p>
                 <hr class="my-4">
                 <p>Thestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog. </p>
-                <a class="btn btn-primary btn-lg start-sorting" href="#" role="button">Start Sorting</a>
+                <a class="btn btn-primary btn-lg" href="#" role="button" id="start-sorting">Start Sorting</a>
         </div>
 
             <form>
-                <div class="form-inline sort-form">
-                    <label for="studentName">Student: </label>
-                    <input type="text" class="form-control" id="nameInput" placeholder="Enter name">
+                
+                <div class="form-row" id="sort-form">
+                    <label for="studentName" class="col-sm-2">Student:</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id="nameInput" placeholder="Enter name">
+                        </div>
+                    <button type="submit" class="btn btn-primary" id="sort-student">Sort!</button>
                 </div>
             </form>
         
