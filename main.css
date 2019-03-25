@@ -11,6 +11,14 @@ body {
     margin-bottom: 20px;
 }
 
+.studentNameLabel {
+    margin-right: 15px;
+}
+
+.student-body {
+    margin-bottom: 15px;
+}
+
 .card {
     text-align: center;
     margin-bottom: 15px;
@@ -37,4 +45,13 @@ body {
     background-color: blue;
     border: solid 2px silver;
     color: white;
+}
+
+.expelled {
+    background-color: black;
+    color: red;
+}
+
+.expelled-div {
+    margin:0;
 }

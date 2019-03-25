@@ -1,6 +1,7 @@
 
 let students = [];
 const houses = ['Gryffindor', 'Hufflepuff', 'Ravenclaw', 'Slytherin'];
+let expelledStudents = [];
 let studentId = 0;
 
 
@@ -30,7 +31,7 @@ const buildForm = () => {
    domString += `<label for="nameInput" class="studentNameLabel">Student Name:</label>`;
    domString += `<input type="text" class="form-control" id="nameInput" placeholder="Enter name">`;
    domString += `</div>`;
-   domString += `<button type="submit" class="btn btn-primary" id="sort-form-button">Sort!</button>`;
+   domString += `<button type="submit" class="btn btn-primary student-text-label" id="sort-form-button">Sort!</button>`;
    domString += `</form>`;
    domString += `</div>`;
    printToDom('form-div', domString);
@@ -44,7 +45,7 @@ const studentBody = () => {
     domString = '';
 
     students.forEach(student => {
-    domString += `<div class="col-12 col-sm-6 col-md-3">`;    
+    domString += `<div class="col-12 col-sm-6 col-md-3 student-body">`;    
     domString += `<div class="card ${student.house}" id='${student.id}'>`;
     domString += `<h5 class="card-title">${student.name}</h5>`;
     domString += `<h5 class="card-text">${student.house}</h5>`;
@@ -55,6 +56,26 @@ const studentBody = () => {
     });
     return domString;
 };
+
+const expelledStudentsArray = () => {
+    domString = "";
+    domString = `<div class="container expelled-div">`;
+    domString += `<h4>Voldemort's Army</h4>`;
+    domString += `<div class="row">`;
+
+    expelledStudents.forEach(student => {
+        domString += `<div class="col-12 col-sm-6 col-md-3">`;    
+        domString += `<div class="card expelled" id='${student.id}'>`;
+        domString += `<h5 class="card-title">${student.name}</h5>`;
+        domString += `</div>`;
+        domString += `</div>`;
+        
+        });
+        domString += `</div>`;
+        domString += `</div>`;
+        return domString;
+
+}
 
 
 // function to add new student objects to an array 
@@ -113,9 +134,12 @@ const findStudentById = (id) => {
 const removeStudent = (id) => {
         
         let studentIndex = findStudentById(id);
-        students.splice(studentIndex, 1);
+        expelledStudents.unshift(students.splice(studentIndex, 1)[0]);
         printToDom('student-body-div', studentBody());
         expelEvent();
+        expelledStudentsArray();
+        console.log(expelledStudents);
+        printToDom('expelled-students-div', domString);
     };
 
     
