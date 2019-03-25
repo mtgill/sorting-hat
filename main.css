@@ -2,6 +2,39 @@ body {
     background-color: lightblue;
 }
 
-/* #student-card {
-    flex-direction: row;
-} */
+.label {
+    margin-left: 25px;
+}
+
+#sort-form {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.Gryffindor {
+    background-color: darkred;
+    border: solid 2px goldenrod;
+    color: white;
+}
+
+.Hufflepuff {
+    background-color: yellow;
+    border: solid 2px black;
+}
+
+.Slytherin {
+    background-color: darkgreen;
+    border: solid 2px silver;
+    color: white;
+}
+
+.Ravenclaw {
+    background-color: blue;
+    border: solid 2px silver;
+    color: white;
+}
