@@ -6,7 +6,7 @@ When the expel button is pressed, the student is removed from the student body a
 
 ## Screenshots
 
-
+![sorting-hat screenshot](https://raw.githubusercontent.com/mtgill/sorting-hat/master/screenshots/screenshot-3-28-19.PNG "sorting-hat screenshot")
 
 
 ## Getting Started
