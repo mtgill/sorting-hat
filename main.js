@@ -25,13 +25,13 @@ const sortFormUnhide = (divId) => {
 const buildForm = () => {
    let domString = "";
    domString += `<div id="sort-form">`;
-   domString += `<h3>Enter Student Name</h3>`;
-   domString += `<form class='form-inline'>`;
-   domString += `<div class="form-group">`;
-   domString += `<label for="nameInput" class="studentNameLabel">Student Name:</label>`;
-   domString += `<input type="text" class="form-control" id="nameInput" placeholder="Enter name">`;
-   domString += `</div>`;
-   domString += `<button type="submit" class="btn btn-primary student-text-label" id="sort-form-button">Sort!</button>`;
+    domString += `<h3>Enter Student Name</h3>`;
+        domString += `<form class='form-inline'>`;
+        domString += `<div class="form-group">`;
+            domString += `<label for="nameInput" class="studentNameLabel">Student Name:</label>`;
+            domString += `<input type="text" class="form-control" id="nameInput" placeholder="Enter name">`;
+        domString += `</div>`;
+        domString += `<button type="submit" class="btn btn-primary" id="sort-form-button">Sort!</button>`;
    domString += `</form>`;
    domString += `</div>`;
    printToDom('form-div', domString);
@@ -46,16 +46,17 @@ const studentBody = () => {
 
     students.forEach(student => {
     domString += `<div class="col-12 col-sm-6 col-md-3 student-body">`;    
-    domString += `<div class="card ${student.house}" id='${student.id}'>`;
-    domString += `<h5 class="card-title">${student.name}</h5>`;
-    domString += `<h5 class="card-text">${student.house}</h5>`;
-    domString += `<button type="button" class="btn btn-secondary expel" id='expel'>Expel!</button>`;
+        domString += `<div class="card ${student.house}" id='${student.id}'>`;
+            domString += `<h5 class="card-title">${student.name}</h5>`;
+            domString += `<h5 class="card-text">${student.house}</h5>`;
+        domString += `<button type="button" class="btn btn-secondary expel" id='expel'>Expel!</button>`;
     domString += `</div>`;
     domString += `</div>`;
     
     });
     return domString;
 };
+
 
 const expelledStudentsArray = () => {
     domString = "";
@@ -69,7 +70,6 @@ const expelledStudentsArray = () => {
         domString += `<h5 class="card-title">${student.name}</h5>`;
         domString += `</div>`;
         domString += `</div>`;
-        
         });
         domString += `</div>`;
         domString += `</div>`;
